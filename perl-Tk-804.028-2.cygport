@@ -1,0 +1,24 @@
+CPAN_AUTHOR=srezic
+inherit perl
+
+PATCH_URI="mirror://portage/dev-perl/perl-tk/files/xorg.patch
+           mirror://portage/dev-perl/perl-tk/files/${PV}-MouseWheel.patch
+           mirror://portage/dev-perl/perl-tk/files/${PV}-FBox.patch
+           mirror://portage/dev-perl/perl-tk/files/${PV}-path.patch"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	perl_compile x X11ROOT=/usr XFT=1
+
+	for d in DragDrop demos JPEG PNG pod TextList WinPhoto
+	do
+		cygmake -j1 -C ${d} manifypods
+	done
+}
+
+src_install() {
+	cd ${B}
+	cygmake pure_install DESTDIR=${D}
+	perl_postinst
+}

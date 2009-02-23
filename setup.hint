@@ -1,4 +1,4 @@
 category: Perl X11
-requires: cygwin libX11_6 libjpeg62 libpng12 perl
+requires: cygwin libfontconfig1 libjpeg62 libpng12 libX11_6 libXft2 perl
 sdesc: "Perl interface for Tk (X11)"
 ldesc: "Complete Perl interface for Tk, built against Cygwin/X."
