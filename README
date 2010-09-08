@@ -4,21 +4,21 @@ Complete Perl interface to the Tk environment,
 using the xorg-x11 environment.
 
 Runtime requirements:
-  cygwin-1.7.5-1
+  cygwin-1.7.7-1
   libfontconfig1-2.8.0-1
-  libgcc1-4.3.4-3
-  libjpeg7-7-10
-  libpng12-1.2.35-10
-  libssp0-4.3.4-3
-  libX11_6-1.3.3-1
+  libgcc1-4.5.0-1
+  libjpeg8-8b-1
+  libpng14-1.4.3-2
+  libssp0-4.5.0-1
+  libX11_6-1.3.5-1
   libXft2-2.1.14-1
   perl-5.10.1-3
 
 Build requirements:
 (besides corresponding -devel packages)
   binutils-2.20.51-2
-  cygport-0.9.85-1
-  gcc4-core-4.3.4-3
+  cygport-0.10.0-1
+  gcc4-core-4.5.0-1
   make-3.81-2
 
 Canonical homepage:
@@ -43,6 +43,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 804.029-2 -----
+Rebuilt for jpeg-8 and libpng14.
 
 ----- version 804.029-1 -----
 Version bump.
