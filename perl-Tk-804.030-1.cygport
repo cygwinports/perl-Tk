@@ -1,13 +1,12 @@
 CPAN_AUTHOR=srezic
 inherit perl
 
-PATCH_URI="mirror://portage/dev-perl/perl-tk/files/xorg.patch
-           mirror://portage/dev-perl/perl-tk/files/804.028-path.patch"
+#PATCH_URI="mirror://portage/dev-perl/perl-tk/files/xorg.patch"
 
 src_compile() {
 	lndirs
 	cd ${B}
-	perl_compile x XFT=1
+	perl_compile x
 
 	for d in DragDrop demos JPEG PNG pod TextList WinPhoto
 	do
