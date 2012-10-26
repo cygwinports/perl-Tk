@@ -1,7 +1,11 @@
 CPAN_AUTHOR=srezic
 inherit perl
 
-#PATCH_URI="mirror://portage/dev-perl/perl-tk/files/xorg.patch"
+NAME="perl-Tk"
+VERSION=804.030
+RELEASE=3
+CATEGORY="Perl"
+SUMMARY="Tk GUI toolkit for Perl"
 
 src_compile() {
 	lndirs
