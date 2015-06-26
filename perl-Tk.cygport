@@ -2,18 +2,18 @@ CPAN_AUTHOR=srezic
 inherit perl
 
 NAME="perl-Tk"
-VERSION=804.031
+VERSION=804.033
 RELEASE=1
 CATEGORY="Perl"
 SUMMARY="Tk GUI toolkit for Perl"
 
 PATCH_URI="
-	fedora/perl-Tk-widget.patch
 	fedora/perl-Tk-debian.patch.gz
 	fedora/perl-Tk-seg.patch
-	fedora/Tk-804.031-Link-PNG-test-to-zlib.patch
 	fedora/perl-Tk-freetype25.patch
 "
+
+REQUIRES_EXCLUDE_FROM="${PERL_VENDORARCH}/Tk/MMutil.pm"
 
 src_compile() {
 	lndirs
