@@ -2,7 +2,7 @@ CPAN_AUTHOR=srezic
 inherit perl
 
 NAME="perl-Tk"
-VERSION=804.033
+VERSION=804.034
 RELEASE=1
 CATEGORY="Perl"
 SUMMARY="Tk GUI toolkit for Perl"
@@ -10,7 +10,6 @@ SUMMARY="Tk GUI toolkit for Perl"
 PATCH_URI="
 	fedora/perl-Tk-debian.patch.gz
 	fedora/perl-Tk-seg.patch
-	fedora/perl-Tk-freetype25.patch
 "
 
 REQUIRES_EXCLUDE_FROM="${PERL_VENDORARCH}/Tk/MMutil.pm"
@@ -29,5 +28,4 @@ src_compile() {
 src_install() {
 	cd ${B}
 	cygmake pure_install DESTDIR=${D}
-	perl_postinst
 }
